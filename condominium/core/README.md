@@ -1,1 +1,1 @@
-# smartcontractexamples
+# Condominium Smart Contract Example
