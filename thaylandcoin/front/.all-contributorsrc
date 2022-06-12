@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "thaynaracsantos",
+      "name": "Thaynara Santos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7781785?s=400&u=652f2bb33c213885f88cf89be4bbbbdbacef0007&v=4",
+      "profile": "https://github.com/thaynaracsantos",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "thaylandcoin-sc-front",
+  "projectManager": "Thaynara Santos",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
