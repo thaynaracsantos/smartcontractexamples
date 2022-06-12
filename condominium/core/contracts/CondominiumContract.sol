@@ -8,7 +8,6 @@ contract Condominium {
     address public condominiumManager;
     string public condominiumName;
     uint256 public condominiumDefaultFee;
-    mapping(address => string) public withdrawHistory;
 
     bool locked = false;
 
@@ -40,32 +39,11 @@ contract Condominium {
         return address(this).balance;
     }
 
-    function payCondominiumBill(address payable _to, uint256 _total, string memory _reason) public {
+    function payCondominiumFee() public payable {
         require(!locked, "Reentrant call detected!");
         locked = true;
 
-        require(
-            msg.sender == condominiumManager,
-            "You must be the manager of the condominium to withdraw."
-        );
-
-        require(_total <= getCondominiumBalance(), "You have insuffient funds to do the payment.");
-        
-        withdrawHistory[_to] = string(abi.encodePacked("Reason: ", _reason, ". Total: ", _total));
-
-        (bool success, ) = _to.call{value: _total}("");
-        require(success, "Transfer failed."); 
-
-        locked = false;       
-    }
-
-    function payCondominiumFee(uint256 _condominiumFee) public payable {
-        require(!locked, "Reentrant call detected!");
-        locked = true;
-
-        require(_condominiumFee == condominiumDefaultFee, string(abi.encodePacked("The amount need to be equal to ", condominiumDefaultFee)));
-
-        (bool success, ) = condominiumManager.call{value: _condominiumFee}("");
+        (bool success, ) = msg.sender.call{value: msg.value}("");
         require(success, "Transfer failed."); 
 
         locked = false;  

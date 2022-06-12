@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Projects\\smartcontractexample\\contracts\\CondominiumContract.sol": {
-      "lastModificationDate": 1654985740933,
-      "contentHash": "82c10dec1e487973b4f41e63badc221f",
+    "C:\\Projects\\smartcontractexamples\\condominium\\core\\contracts\\CondominiumContract.sol": {
+      "lastModificationDate": 1654999871095,
+      "contentHash": "b057ff247d7cee4c494ce44ccae94ffe",
       "sourceName": "contracts/CondominiumContract.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -38,7 +38,7 @@
         "Condominium"
       ]
     },
-    "C:\\Projects\\smartcontractexample\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+    "C:\\Projects\\smartcontractexamples\\condominium\\core\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
       "lastModificationDate": 1654985889745,
       "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
